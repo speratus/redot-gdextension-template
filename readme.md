@@ -13,6 +13,26 @@ To set up a repository using this template, simply click the "Use this template"
 repository. You will then be presented with a new repository wizard that will guide you through the remaining setup 
 steps.
 
+### Cloning the repository
+
+This template uses a [git submodule][3] to make it easier to use the correct version of the Redog GDExtension API. As a
+result, you must use a slightly different process for cloning repositories generated with this template. If you haven't
+cloned the repo yet, you can use the following command to get the submodules automatically:
+```sh
+git clone --recurse-submodules <YOUR_REPO_URL>
+```
+
+If you have already cloned the repo, you can initialize the submodules by running the following two commands:
+```sh
+git submodule init
+git submodule update
+```
+
+Or by running the combined command:
+```sh
+git submodule update --init
+```
+
 ## Building the extension.
 
 To build projects created with this template, you will need to run `scons`. If you have not already setup your system

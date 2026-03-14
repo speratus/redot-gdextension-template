@@ -5,6 +5,8 @@
 #include "register_types.h"
 
 #include <gdextension_interface.h>
+#include <godot_cpp/core/defs.hpp>
+#include <godot_cpp/godot.hpp>
 
 using namespace godot;
 
@@ -34,7 +36,9 @@ GDExtensionBool GDE_EXPORT init_gdextension(
 
     init_object.register_initializer(register_gdextension_types);
     init_object.register_terminator(unregister_gdextension_types);
-    init_object.set_minimum_library_initialization_level(MODULE_INITIALIZATION_LEVEL_LATE);
+    init_object.set_minimum_library_initialization_level(MODULE_INITIALIZATION_LEVEL_SCENE);
+
+	return init_object.init();
 }
 }
 

@@ -42,7 +42,7 @@ ios.release = {{
 }}
     """.format(PROJECT_NAME)
 
-    gdextension_file_path = "demo/template.gdextension"
+    gdextension_file_path = f"demo/{PROJECT_NAME}.gdextension"
 
     with open(gdextension_file_path, "w") as gdextension_file:
         gdextension_file.write(gdextension_file_content)

@@ -1,6 +1,7 @@
 demo/bin
 
 .idea
+
 # Godot auto generated files
 *.gen.*
 .import/
